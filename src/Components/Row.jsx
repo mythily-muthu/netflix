@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+
+import Movie from "./Movie";
 
 let Row = ({ title, fetchURL }) => {
   let [movies, setMovies] = useState([]);
-  let [like, setLike] = useState(false);
 
   useEffect(() => {
     axios.get(fetchURL).then((response) => {
@@ -20,10 +20,9 @@ let Row = ({ title, fetchURL }) => {
 
       <div className="relative flex items-center p-8 ">
         <div id={"slider"}>
-          {movies?.map((item) => (
-            
+          {movies?.map((item, id) => (
+            <Movie key={id} item={item} />
           ))}
-          ;
         </div>
       </div>
     </div>
