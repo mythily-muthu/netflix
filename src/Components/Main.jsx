@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Main = () => {
   let [movies, setMovies] = useState([]);
-  let [movie, setMovie] = useState({});
+  //let [movie, setMovie] = useState({});
 
   const getMovies = async () => {
     let response = await axios.get(requests.requestPopular);
@@ -12,15 +12,16 @@ const Main = () => {
     setMovies(response.data.results);
   };
   console.log("movies;");
+  let movie = movies[Math.floor(Math.random() * movies.length)];
 
   useEffect(() => {
     getMovies();
-    let interval = setInterval(() => {
-      setMovie(movies[Math.floor(Math.random() * movies.length)]);
-    }, 5000);
-    return () => clearInterval(interval);
+    //let interval = setInterval(() => {
+    //setMovie(movies[Math.floor(Math.random() * movies.length)]);
+    // }, 5000);
+    // return () => clearInterval(interval);
   }, []);
-  console.log("movie:", movie);
+  //console.log("movie:", movie);
 
   return (
     <div className="w-full h-[550px] text-white">
@@ -43,7 +44,7 @@ const Main = () => {
           </button>
         </div>
 
-        <div className="w-[70%] absolute md:w-[70%] sm:max-w-[90%]">
+        <div className="w-[70%] absolute md:w-[70%] sm:w-[90%]">
           <p className="mt-6 text-gray-300">Released {movie?.release_date}</p>
           <p className="py-2 text-white ">{movie?.overview}</p>
         </div>
