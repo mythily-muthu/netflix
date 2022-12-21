@@ -43,7 +43,7 @@ const Main = () => {
           </button>
         </div>
 
-        <div className="w-[70%] absolute md:max-w-[70%] sm:max-w-[90%]">
+        <div className="w-[70%] absolute md:w-[70%] sm:max-w-[90%]">
           <p className="mt-6 text-gray-300">Released {movie?.release_date}</p>
           <p className="py-2 text-white ">{movie?.overview}</p>
         </div>
