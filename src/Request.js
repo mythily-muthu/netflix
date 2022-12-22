@@ -10,7 +10,7 @@ let requests = {
 
     requestNowPlaying: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`,
 
-    requestLatest: `https://api.themoviedb.org/3/movie/latest?api_key=${key}&language=en-US`
+
 
 
 };
