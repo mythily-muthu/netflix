@@ -25,9 +25,10 @@ const Main = () => {
 
   return (
     <div className="w-full h-[550px] text-white">
-      <div className="w-full h-full">
+      <div className=" absolute w-full h-[550px] bg-gradient-to-r from-black "></div>
+      <div className="w-full h-[550px]  ">
         <img
-          className="w-full h-full object-cover  "
+          className="w-full h-full object-cover "
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
           alt={movie?.title}
         />
@@ -44,7 +45,7 @@ const Main = () => {
           </button>
         </div>
 
-        <div className="w-[70%] absolute md:w-[70%] sm:w-[90%]">
+        <div className="w-[50%] absolute md:w-[70%] sm:w-[90%] lg:w-[50%]">
           <p className="mt-6 text-gray-300">Released {movie?.release_date}</p>
           <p className="py-2 text-white ">{movie?.overview}</p>
         </div>
