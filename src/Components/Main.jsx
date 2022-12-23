@@ -45,7 +45,7 @@ const Main = () => {
           </button>
         </div>
 
-        <div className="w-[50%] absolute md:w-[70%] sm:w-[90%] lg:w-[50%]">
+        <div className="w-[50%] absolute md:w-[70%] sm:w-[100%] lg:w-[50%]">
           <p className="mt-6 text-gray-300">Released {movie?.release_date}</p>
           <p className="py-2 text-white ">{movie?.overview}</p>
         </div>
