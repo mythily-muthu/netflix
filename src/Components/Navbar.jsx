@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <div className="">
         <Link to="/login">
-          <button className="text-white cursor-pointer p-3 font-bold">
+          <button className="text-white cursor-pointer p-3 font-bold hover:underline ">
             Sign In
           </button>
         </Link>
