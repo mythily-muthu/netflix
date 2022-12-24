@@ -1,12 +1,13 @@
-import { async } from "@firebase/util";
+//import { async } from "@firebase/util";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let { user, SignUp } = UserAuth();
+  let navigate = useNavigate();
 
   let handleSubmit = async (e) => {
     e.preventDefault();
