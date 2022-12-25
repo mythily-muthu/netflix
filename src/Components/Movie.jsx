@@ -26,7 +26,7 @@ const Movie = ({ item }) => {
       alert("Please log in to save a movie");
     }
   };
-
+  console.log(saved);
   return (
     <div className=" w-[300px] sm:w-[200px] md:w-[250px] lg:w-[350px]  inline-block cursor-pointer  relative p-1 ml-3">
       <img
