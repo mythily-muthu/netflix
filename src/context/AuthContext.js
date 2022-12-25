@@ -36,7 +36,7 @@ export function AuthContextProvider({ children }) {
             unsubscribe();
         };
     });
-
+    console.log("uer:", user)
     return (
         <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>
             {children}

@@ -29,7 +29,7 @@ let Row = ({ title, fetchURL, rowID }) => {
       <div className="relative flex items-center p-8 group">
         <MdChevronLeft
           onClick={slideLeft}
-          className=" left-0 bg-white rounded-full opacity-50 hover:opacity-80 cursor-pointer z-10 hidden group-hover:block"
+          className=" left-0 bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block"
           size={40}
         />
         <div
@@ -41,7 +41,7 @@ let Row = ({ title, fetchURL, rowID }) => {
           ))}
         </div>
         <MdChevronRight
-          className=" right-0 bg-white rounded-full opacity-50 hover:opacity-80 cursor-pointer z-10 hidden group-hover:block"
+          className=" right-0 bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block"
           size={40}
           onClick={slideRight}
         />

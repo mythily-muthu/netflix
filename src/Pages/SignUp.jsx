@@ -6,13 +6,16 @@ import { UserAuth } from "../context/AuthContext";
 const SignUp = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  let { user, SignUp } = UserAuth();
+  let { user, signUp } = UserAuth();
   let navigate = useNavigate();
+
+  console.log("auth", UserAuth());
 
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await SignUp(email, password);
+      await signUp(email, password);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -44,7 +47,10 @@ const SignUp = () => {
                 type="password"
               ></input>
 
-              <button className="my-5 py-2 rounded bg-orange-700 w-full   font-bold cursor-pointer">
+              <button
+                type="submit"
+                className="my-5 py-2 rounded bg-orange-700 w-full   font-bold cursor-pointer"
+              >
                 Sign Up
               </button>
               <div className="flex justify-between mt-2">
