@@ -15,9 +15,10 @@ const Login = () => {
 
     try {
       await logIn(email, password);
-      //navigate("/");
+      navigate("/");
     } catch (error) {
       console.log(error);
+      setError(error.message);
     }
   };
 
@@ -35,6 +36,7 @@ const Login = () => {
             <div className="max-w-[450px] h-[600px] bg-black/75 text-white  mx-auto">
               <div className=" max-w-[320px] mx-auto py-16">
                 <h1 className="text-3xl font-extrabold">Sign In</h1>
+                {error ? <p className="p-3 bg-red-400 my-2">{error}</p> : null}
                 <form onSubmit={handleSubmit} className="my-7">
                   <input
                     onChange={(e) => setEmail(e.target.value)}

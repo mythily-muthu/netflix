@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
 
       {user?.email ? (
-        <div className="">
+        <div>
           <Link to="/account">
             <button className="text-white cursor-pointer p-3 font-bold hover:underline ">
               Account
@@ -36,7 +36,7 @@ const Navbar = () => {
             onClick={handleLogout}
             className="text-white bg-red-600 rounded px-5 py-2 cursor-pointer font-bold"
           >
-            Log Out
+            Logout
           </button>
         </div>
       ) : (
